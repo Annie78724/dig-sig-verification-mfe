@@ -1,1 +1,6 @@
-<p>home works!</p>
+<div *ngFor="let flightdetail of flightDetails">
+    <app-flight-info
+      [flightDetails]="flightdetail">
+    </app-flight-info>
+</div>
+  

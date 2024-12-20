@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-flight-info',
@@ -9,4 +9,25 @@ import { Component } from '@angular/core';
 })
 export class FlightInfoComponent {
 
+    @Input() flightDetails!: {
+      flightId: string;
+      departure: {
+        time: string;
+        place: string;
+      };
+      duration: {
+        time: string;
+        type: string;
+      };
+      arrival: {
+        time: string;
+        place: string;
+      };
+      booking: {
+        class: string;
+        price: string;
+        rewardPoints: string;
+      };
+    };
+  
 }

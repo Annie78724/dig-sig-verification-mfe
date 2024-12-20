@@ -1,1 +1,32 @@
-<p>flight-info works!</p>
+<ng-container>
+    <div class="flight-container">
+      <div class="flight-id">
+        <img>
+        <p>{{ flightDetails.flightId }}</p>
+      </div>
+      <div class="flight-info">
+        <div class="from-info">
+          <h3 class="from-time">{{ flightDetails.departure.time }}</h3>
+          <p class="from-place">{{ flightDetails.departure.place }}</p>
+        </div>
+        <div class="flight-duration">
+          <!-- <mat-icon>flight_takeoff</mat-icon> -->
+          <div class="info">
+            <div>{{ flightDetails.duration.time }}</div>
+            <div>{{ flightDetails.duration.type }}</div>
+          </div>
+          <div class="icon"></div>
+        </div>
+        <div class="to-info">
+          <h3 class="to-time">{{ flightDetails.arrival.time }}</h3>
+          <p class="to-place">{{ flightDetails.arrival.place }}</p>
+        </div>
+        <div class="booking-info">
+          <div class="sub-info">{{ flightDetails.booking.class }}</div>
+          <div class="price">{{ flightDetails.booking.price }}</div>
+          <div class="points">Book Now</div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  
